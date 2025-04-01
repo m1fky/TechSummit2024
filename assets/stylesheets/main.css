@@ -1,0 +1,714 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+  ========================================
+  Пользовательские стили
+  ========================================
+*/
+
+body {
+  background: #293f50;
+  color: #888;
+  font: 300 16px/22px "Roboto", "Open Sans", "Helvetica Neue",
+      Helvetica, Arial, sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+strong {
+  font-weight: 400;
+}
+
+cite, em {
+  font-style: italic;
+}
+
+/*
+========================================
+Сетка
+========================================
+*/
+
+*,
+*:before,
+*:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.container,
+.grid {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.col-1-3 {
+  width: 33%;
+}
+
+.col-2-3 {
+  width: 67%;
+}
+
+.col-1-3,
+.col-2-3 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.grid,
+.col-1-3,
+.col-2-3 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.group::before,
+.group::after {
+  content: "";
+  display: table;
+}
+
+.group::after {
+  clear: both;
+}
+
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+  ========================================
+  Полосы
+  ========================================
+*/
+
+.row,
+.row-alt {
+  width: 100%;
+}
+
+.row {
+  background: #fff;
+  padding: 66px 0 44px 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.row-alt {
+  background: #cbe2c1;
+  background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background: linear-gradient(to right, #a1d3b0, #f6f1d3);
+  padding: 44px 0 22px 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/*
+  ========================================
+  Типографика
+  ========================================
+*/
+
+h1, h3, h4, h5, p {
+  margin-bottom: 22px;
+}
+
+h1, h2, h3, h4 {
+  color: #648880;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 44px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  color: #a9b2b9;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/*
+  ========================================
+  Вступление
+  ========================================
+*/
+
+.lead {
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.lead p {
+  font-size: 21px;
+  line-height: 33px;
+}
+
+/*
+  ========================================
+  Главная страница
+  ========================================
+*/
+
+.hero {
+  color: #fff;
+  line-height: 44px;
+  padding: 22px 80px 66px 80px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h2 {
+  font-size: 36px;
+}
+
+.hero p {
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.teaser img {
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 22px;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.teaser:hover img {
+  transform: scale(1.1);
+}
+
+.teaser {
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.teaser:nth-child(1) { animation-delay: 0.2s; }
+.teaser:nth-child(2) { animation-delay: 0.4s; }
+.teaser:nth-child(3) { animation-delay: 0.6s; }
+
+/*
+  ========================================
+  Кнопки
+  ========================================
+*/
+
+.btn {
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin: 0;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-alt {
+  border: 1px solid #fff;
+  padding: 10px 30px;
+}
+.btn-alt:hover {
+  background: #fff;
+  color: #648880;
+}
+
+.btn-default {
+  border: 0;
+  background: #648880;
+  padding: 11px 30px;
+  font-size: 14px;
+}
+.btn-default:hover {
+  background: #77a198;
+}
+
+/*
+  ========================================
+  Основной заголовок
+  ========================================
+*/
+
+.logo {
+  border-top: 4px solid #648880;
+  float: left;
+  font-size: 48px;
+  font-weight: 100;
+  letter-spacing: .5px;
+  line-height: 44px;
+  padding: 40px 0 22px 0;
+  text-transform: uppercase;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.tagline {
+  margin: 66px 0 22px 0;
+  text-align: right;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.primary-nav {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+/*
+  ========================================
+  Навигация
+  ========================================
+*/
+
+.nav {
+  text-align: right;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.nav a {
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff6347;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: top;
+}
+
+.nav li:last-child {
+  margin-right: 0;
+}
+
+/*
+  ========================================
+  Основной подвал
+  ========================================
+*/
+
+.primary-footer {
+  color: #648880;
+  font-size: 14px;
+  padding-bottom: 44px;
+  padding-top: 44px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.primary-footer small {
+  float: left;
+  font-weight: 400;
+}
+
+/*
+  ========================================
+  Ссылки
+  ========================================
+*/
+
+a {
+  color: #648880;
+  text-decoration: none;
+}
+a:hover {
+  color: #a9b2b9;
+}
+p a {
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.teaser a:hover h3 {
+  color: #a9b2b9;
+}
+
+.primary-header a,
+.primary-footer a {
+  color: #fff;
+}
+.primary-header a:hover,
+.primary-footer a:hover {
+  color: #648880;
+}
+
+/*
+  ========================================
+  Основные моменты
+  ========================================
+*/
+
+.highlights-list li {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.highlights-list li:hover {
+  background-color: #f9f9f9;
+}
+
+.highlights-list h3 {
+	margin-top: 0;
+  color: #648880;
+  font-size: 1.5em;
+}
+
+.highlights-list p {
+  margin-bottom: 0;
+  color: #7f8c8d;
+  font-size: 1.1em;
+}
+
+/*
+  ========================================
+  Отзывы
+  ========================================
+*/
+
+.testimonial {
+  margin-bottom: 20px;
+  padding: 35px;
+  background-color: #f6f1d3;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.testimonial p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.testimonial p:first-of-type {
+  font-style: italic;
+}
+
+/*
+  ========================================
+  Спикеры
+  ========================================
+*/
+
+.speaker {
+  margin-bottom: 44px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #dfe2e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.speaker:last-child {
+  border-bottom: none;
+}
+
+.speaker-info {
+  width: 32%;
+  text-align: center;
+}
+
+.speaker-content {
+  position: relative;
+}
+
+.speaker-content:hover .speaker-info img {
+  transform: scale(1.1); /* Увеличение изображения на 10% */
+  transition: transform 0.3s ease; /* Плавный переход для увеличения */
+}
+
+.speaker-info img {
+  border-radius: 100px;
+  height: 200px;
+  margin-bottom: 22px;
+  vertical-align: top;
+  transition: transform 0.3s ease; /* Плавный переход для увеличения */
+}
+
+
+.speaker-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.speaker-info li {
+  margin-bottom: 10px;
+}
+
+.speaker h2 {
+  font-size: 24px;
+  line-height: 44px;
+  margin-bottom: 5px;
+}
+
+.speaker h5 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+/* Clear fix */
+.group::before,
+.group::after {
+  content: "";
+  display: table;
+}
+
+.group::after {
+  clear: both;
+}
+
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+  ========================================
+  Расписание
+  ========================================
+*/
+
+.schedule-table {
+  margin-bottom: 44px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 15px;
+  vertical-align: top;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.schedule-table thead {
+  background-color: #648880;
+  color: #fff;
+}
+
+.schedule-table thead th {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.schedule-table tbody th {
+  color: #a9b2b9;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 22px;
+  text-transform: uppercase;
+  width: 20%;
+}
+
+.schedule-table tbody td {
+  width: 40%;
+}
+
+.schedule-table a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.schedule-table h4 {
+  margin-bottom: 0px;
+}
+
+.schedule-table .speaker-name {
+  color: #648880;
+  font-weight: 400;
+}
+
+.schedule-table .talk-theme {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.schedule-table a:hover .speaker-name,
+.schedule-table a:hover .talk-theme {
+  color: #a9b2b9;
+}
+
+.schedule-table th.schedule-time-header {
+  text-align: center;
+  padding-right: 0px;
+}
+
+/*
+  ========================================
+  Место проведения
+  ========================================
+*/
+
+.venue-theatre {
+  margin-bottom: 66px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.venue-hotel {
+  margin-bottom: 22px;
+	animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.venue-map {
+  height: 264px;
+	animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/*
+  ========================================
+  Регистрация
+  ========================================
+*/
+
+.why-attend {
+  list-style: square;
+  margin: 0 0 22px 30px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+form {
+  margin-bottom: 22px;
+}
+input,
+select,
+textarea {
+  font: 300 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.register-group label {
+  color: #648880;
+  cursor: pointer;
+  font-weight: 400;
+}
+.register-group input,
+.register-group select,
+.register-group textarea {
+  border: 1px solid #c6c9cc;
+  border-radius: 5px;
+  color: #888;
+  display: block;
+  margin: 5px 0 27px 0;
+  padding: 5px 8px;
+}
+.register-group input,
+.register-group textarea {
+  width: 100%;
+}
+.register-group select {
+  height: 34px;
+  width: 60px;
+}
+.register-group textarea {
+  height: 78px;
+}
+
+/*
+  ========================================
+  Анимации
+  ========================================
+*/
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
